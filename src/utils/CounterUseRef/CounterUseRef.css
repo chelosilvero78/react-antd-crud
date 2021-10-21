@@ -1,0 +1,16 @@
+
+.render-div{
+    padding: 1rem;
+}
+.render-now{
+    color:teal;
+    font-weight:bold;
+    padding:3 px;
+    background: #eef
+}
+.render-before{
+    color:#00808063;
+    font-weight:bold;
+    padding:3px;
+    background:#eef;
+}
