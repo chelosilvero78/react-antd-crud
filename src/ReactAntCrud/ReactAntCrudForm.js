@@ -104,6 +104,7 @@ function ReactAndCrudForm(props) {
 
   useEffect(() => {
     const { formFields, formData } = props
+    console.log("ReactAndCrudForm-->frmFields,frmData-->",formFields,formData)
     const _formFields = formFields.map(item => ({
       ...item,
       value: formData ? formData[item.name] : item.value,

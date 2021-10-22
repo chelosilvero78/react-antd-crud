@@ -47,7 +47,7 @@ function ReactAndCrud(props) {
   const getRows = useCallback(async (_pagination, _filters, _sorter) => {
     // loading state on
     // console.log('formDataFilter', formDataFilter)
-    console.log('sorter', _sorter)
+    console.log('sorter-->', _sorter)
     // console.log('pagination', pagination)
     // if (!_pagination) _pagination = { ...pagination }
     try {
