@@ -86,6 +86,7 @@ const formFieldsFilter = [
   }
 ]
 
+//Se indicarán los tipos de control para tomar el componente adecuado
 const formFieldsCrud = [
   {
     name: 'id',

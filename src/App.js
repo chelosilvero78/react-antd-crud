@@ -48,7 +48,16 @@ function App() {
 
   return (
     <Layout className="App">
-      <Header style={{ background: '#eee', paddingLeft: 18,fontWeight:'bold',color:"teal"}}>{clock}</Header>
+      <Header style={
+                { 
+                  background: '#eee', 
+                  paddingLeft: 18,
+                  fontWeight:'bold',
+                  color:"teal"
+                }
+              }>
+                {clock}
+      </Header>
       <Content>
         <ReactAntCrud {...sample} />
         <Counter/>

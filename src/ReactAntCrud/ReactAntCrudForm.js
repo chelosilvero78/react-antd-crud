@@ -104,21 +104,26 @@ function ReactAndCrudForm(props) {
 
   useEffect(() => {
     const { formFields, formData } = props
-    console.log("ReactAndCrudForm-->frmFields,frmData-->",formFields,formData)
+    console.log("ReactAndCrudForm-->frmFields-->",formFields)
+    console.log("ReactAndCrudForm-->frmData-->",formData)
     const _formFields = formFields.map(item => ({
       ...item,
       value: formData ? formData[item.name] : item.value,
       hidden: (item.hidden && item.hidden === 'add' && !formData) || (item.hidden && item.hidden === 'edit' && formData) || (item.hidden && item.hidden === 'all'),
       readonly: (item.readonly && item.readonly === 'add' && !formData) || (item.readonly && item.readonly === 'edit' && formData) || (item.readonly && item.readonly === 'all')
     }))
-    // console.log(formFields)
+    console.log("_formFields-->",_formFields)
+    console.log("formFields-->",formFields)
     setFormItem(_formFields)
   }, [props.mode]) // props.mode, use props.mode instead of props (too senitive), we pay attention only when mode changes
   
+
   const changeValue = (name, value) => {
     setFormItem(
       formItem.map(o => {
-        if (o.name === name) return { ...o, value}
+        if (o.name === name) {
+          return { ...o, value}
+        }
         return o
       })
     )
